@@ -131,7 +131,7 @@ export default function Home() {
       "https://i.pinimg.com/736x/08/b9/2e/08b92e97e5091107e3fde23a3fa6d09a.jpg"
     ].map((item, index) => (
      <div key={index}>
-        <CardComponent media={item} />
+        <CardComponent media={item} unknown={"Unknown"} description={"lorem"} />
       </div>
     ))}
     </Box>
