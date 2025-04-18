@@ -45,7 +45,7 @@ export default function Home() {
     </Typography>
 
     <Typography variant="h6" className="text-white" sx={{ mb: 2 }}>
-      Visi dan Misi Rex Digital:
+      Visi dan Misi RADEX Digital:
     </Typography>
 
     {/* Visi */}
@@ -106,7 +106,7 @@ export default function Home() {
       px={2}
       className="text-white"
     >
-      Dengan visi dan misi ini, Rex Digital dapat menjadi tim IT yang inovatif
+      Dengan visi dan misi ini, RADEX Digital dapat menjadi tim IT yang inovatif
       dan efektif dalam memberikan solusi teknologi digital yang berkualitas
       tinggi.
     </Typography>
