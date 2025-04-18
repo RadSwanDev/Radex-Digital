@@ -1,103 +1,148 @@
-import Image from "next/image";
+import CardComponent from "@/component/atom/card";
+import { Box, Button, List, ListItem, Typography } from "@mui/material";
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+   <>
+   <div className="flex w-screen h-screen items-center bg-black/80">
+      <Box display={"flex"} sx={{padding:3}} gap={2} justifyContent={"center"} flexDirection={"column"}>
+        <Typography variant="h1" fontWeight={800} color="warning">RADEX DIGITAL</Typography>
+        <Typography variant="h5" className="text-white" fontWeight={600}>
+           Jasa Penyedia Pembuatan Website
+        </Typography>
+        <Box display={"flex"} gap={2}>
+          <Button color="warning" variant="contained" sx={{padding:2}} size="large">Tentang Kami</Button>
+          <Button color="warning" variant="outlined" sx={{padding:2}} size="large">Kontak</Button>
+        </Box>
+      </Box>
+      </div>
+      <div className="bg-black/80">
+  <Box
+    display="flex"
+    mx="auto"
+    sx={{
+      padding: { xs: 2, sm: 3, md: 4 },
+      backgroundColor: "#121212",
+      maxWidth: "100%",
+    }}
+    className="rounded-md"
+    flexDirection="column"
+    alignItems="center"
+    textAlign="center"
+  >
+    <Typography
+      variant="h1"
+      color="warning"
+      className="text-white"
+      sx={{
+        fontSize: { xs: 24, sm: 30, md: 40 },
+        fontWeight: 600,
+        mb: 2,
+      }}
+    >
+      Tentang Kami
+    </Typography>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <Typography variant="h6" className="text-white" sx={{ mb: 2 }}>
+      Visi dan Misi Rex Digital:
+    </Typography>
+
+    {/* Visi */}
+    <Box display="flex" flexDirection="column" alignItems="center" mb={2}>
+      <Typography
+        fontWeight={800}
+        fontSize={{ xs: 20, sm: 24, md: 30 }}
+        color="warning"
+        mb={1}
+      >
+        Visi
+      </Typography>
+      <Typography
+        fontSize={{ xs: 14, sm: 16, md: 20 }}
+        maxWidth="800px"
+        px={2}
+        className="text-white"
+      >
+        Menjadi pemimpin dalam inovasi teknologi digital, memberikan solusi
+        yang cepat, efektif, dan berkualitas tinggi untuk memenuhi kebutuhan
+        pelanggan dan meningkatkan efisiensi operasional.
+      </Typography>
+    </Box>
+
+    {/* Misi */}
+    <Typography
+      fontWeight={800}
+      fontSize={{ xs: 20, sm: 24, md: 30 }}
+      color="warning"
+      mb={1}
+    >
+      Misi
+    </Typography>
+    <List sx={{ maxWidth: "800px", mx: "auto", px: 2 }}>
+      {[
+        "Mengembangkan solusi teknologi digital yang inovatif: Menciptakan produk dan layanan yang memenuhi kebutuhan pelanggan dan meningkatkan kualitas hidup.",
+        "Meningkatkan efisiensi operasional: Menggunakan teknologi untuk meningkatkan produktivitas dan efisiensi operasional, sehingga meningkatkan kepuasan pelanggan.",
+        "Membangun tim yang profesional dan berdedikasi: Menciptakan lingkungan kerja yang kondusif dan mendukung pengembangan keterampilan tim.",
+        "Meningkatkan kepuasan pelanggan: Memberikan layanan yang berkualitas tinggi dan responsif terhadap kebutuhan pelanggan.",
+        "Mengikuti perkembangan teknologi terbaru: Terus memantau dan mengadopsi teknologi terbaru untuk meningkatkan kualitas produk dan layanan.",
+      ].map((text, idx) => (
+        <ListItem key={idx}>
+          <Typography
+            fontSize={{ xs: 14, sm: 16, md: 18 }}
+            className="text-white"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+            {idx + 1}. {text}
+          </Typography>
+        </ListItem>
+      ))}
+    </List>
+
+    {/* Penutup */}
+    <Typography
+      fontSize={{ xs: 14, sm: 16, md: 20 }}
+      maxWidth="800px"
+      mt={2}
+      px={2}
+      className="text-white"
+    >
+      Dengan visi dan misi ini, Rex Digital dapat menjadi tim IT yang inovatif
+      dan efektif dalam memberikan solusi teknologi digital yang berkualitas
+      tinggi.
+    </Typography>
+  </Box>
+</div>
+
+
+<div className="bg-black/80">
+        <Box color={"white"} padding={5}>
+          <Typography mx={4} color="warning" fontSize={30} fontWeight={800}>Projects</Typography>
+          <Typography mx={4}>Berikut adalah projects projects yang pernah kami bangun</Typography>
+          <Box my={8} display="grid" gridTemplateColumns="repeat(auto-fit, minmax(250px, 1fr))" gap={4}>
+  {[
+      "https://i.pinimg.com/736x/08/b9/2e/08b92e97e5091107e3fde23a3fa6d09a.jpg",
+      "https://i.pinimg.com/736x/08/b9/2e/08b92e97e5091107e3fde23a3fa6d09a.jpg",
+      "https://i.pinimg.com/736x/08/b9/2e/08b92e97e5091107e3fde23a3fa6d09a.jpg",
+      "https://i.pinimg.com/736x/08/b9/2e/08b92e97e5091107e3fde23a3fa6d09a.jpg",
+      "https://i.pinimg.com/736x/08/b9/2e/08b92e97e5091107e3fde23a3fa6d09a.jpg",
+      "https://i.pinimg.com/736x/08/b9/2e/08b92e97e5091107e3fde23a3fa6d09a.jpg",
+      "https://i.pinimg.com/736x/08/b9/2e/08b92e97e5091107e3fde23a3fa6d09a.jpg",
+      "https://i.pinimg.com/736x/08/b9/2e/08b92e97e5091107e3fde23a3fa6d09a.jpg",
+      "https://i.pinimg.com/736x/08/b9/2e/08b92e97e5091107e3fde23a3fa6d09a.jpg"
+    ].map((item, index) => (
+     <div key={index}>
+        <CardComponent media={item} />
+      </div>
+    ))}
+    </Box>
+  </Box>
+      </div>
+    <div className="bg-black/80 text-center w-screen">
+    <Box color={"white"}>
+      <Typography variant="h5" fontWeight={600}>Hubungi Kami</Typography>
+      <Button color="success" size="large" variant="contained" startIcon={<WhatsAppIcon/>}>Whatsapp</Button>
+    </Box>
     </div>
+   </>
   );
 }
